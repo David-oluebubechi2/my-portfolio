@@ -348,7 +348,7 @@ function Footer() {
       <SocialLinks />
 
       <p className="text-xs text-slate-600 font-mono mt-8">
-        © {new Date().getFullYear()} — Computer Science Senior @ Thomas Adewumi
+        © {new Date().getFullYear()} — Computer Science Student @ Thomas Adewumi
         University
       </p>
     </motion.footer>
