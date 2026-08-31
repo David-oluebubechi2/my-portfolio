@@ -179,7 +179,7 @@ const staggerContainer = {
   },
 };
 
-type ProjectCategory = "fullstack" | "ai";
+type ProjectCategory = "frontend" | "fullstack";
 
 type Project = {
   title: string;
@@ -212,12 +212,7 @@ const projects: Project[] = [
     category: "fullstack",
     description:
       "Full-stack food ordering platform built with React, NestJS, PostgreSQL, Tailwind CSS, and AI-assisted development tools.",
-    tags: [
-      "React",
-      "NestJS",
-      "PostgreSQL",
-      "Tailwind CSS",
-    ],
+    tags: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
     link: "https://choply-jade.vercel.app/",
     image: choplyImage,
   },
@@ -755,7 +750,7 @@ function Projects() {
       </motion.section>
 
       <div className="flex gap-2 bg-slate-900/60 p-1 rounded-xl border border-slate-800 w-fit mb-10">
-        {(["all", "fullstack", "ai"] as const).map((tab) => (
+        {(["all", "fullstack", "frontend"] as const).map((tab) => (
           <button
             key={tab}
             type="button"
@@ -768,8 +763,8 @@ function Projects() {
           >
             {tab === "fullstack"
               ? "Full-Stack"
-              : tab === "ai"
-                ? "AI Apps"
+              : tab === "frontend"
+                ? "Frontend"
                 : "All Work"}
           </button>
         ))}
