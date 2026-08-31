@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import hmsImage from "./assets/hms.png";
+import choplyImage from "./assets/choply.png";
 import profileImage from "./assets/oluebubechi.jpeg";
 
 type IconName =
@@ -199,12 +200,26 @@ const handles = {
 const projects: Project[] = [
   {
     title: "CityCare Hospital Management",
-    category: "fullstack",
+    category: "frontend",
     description:
       "Full-stack medical clinic scheduling and patient portal system engineered with modular routing and database management.",
-    tags: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
+    tags: ["React", "TypeScript", "CSS"],
     link: handles.github,
     image: hmsImage,
+  },
+  {
+    title: "Choply",
+    category: "fullstack",
+    description:
+      "Full-stack food ordering platform built with React, NestJS, PostgreSQL, Tailwind CSS, and AI-assisted development tools.",
+    tags: [
+      "React",
+      "NestJS",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    link: "https://choply-jade.vercel.app/",
+    image: choplyImage,
   },
 ];
 
