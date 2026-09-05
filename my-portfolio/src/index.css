@@ -1,1 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0f0f0f;
+  --color-panel: #171717;
+  --color-ink: #9f9f9f;
+  --color-soft: #bcbcbc;
+  --color-paper: #ffffff;
+  --color-primary: #5b78f6;
+  --color-dark: #323232;
+  --color-line: #2b2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-display);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2a2a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Glassy card — replicates the template's shadow-box */
+.card {
+  position: relative;
+  border-radius: 24px;
+  background: var(--color-bg);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.02)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  opacity: 0.25;
+  pointer-events: none;
+}
+.card > *:not(.absolute) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Primary pill button */
+.theme-btn {
+  display: inline-block;
+  background: var(--color-dark);
+  color: #fff;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 30px;
+  transition: 0.3s;
+}
+.theme-btn:hover {
+  background: #fff;
+  color: var(--color-dark);
+}
+
+/* Muted uppercase label */
+.eyebrow {
+  color: var(--color-soft);
+  opacity: 0.5;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Gradient-trimmed photo (hero / credentials) */
+.gradient-photo {
+  background: linear-gradient(
+    90deg,
+    #3c58e3 -15%,
+    #c2ebff 58%,
+    #5ab5e2 97%
+  );
+  border-radius: 30px 0 30px 0;
+  padding: 4px;
+}
+.gradient-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px 0 26px 0;
+}
+
+/* Faded arrow icon that reveals on card hover */
+.info-arrow {
+  opacity: 0.2;
+  transition: 0.3s;
+  display: inline-flex;
+}
+.card:hover .info-arrow,
+.info-arrow:hover {
+  opacity: 1;
+}
+
+/* Scrolling marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 14s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 111111;
+  background: var(--color-bg);
+}
+.preloader .track {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+  transform-origin: left;
+  scale: 0 1;
+  animation: loader_run 1.2s ease-in-out forwards;
+}
+@keyframes loader_run {
+  to {
+    scale: 1 1;
+  }
+}
