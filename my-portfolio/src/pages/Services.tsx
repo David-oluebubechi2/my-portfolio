@@ -23,7 +23,7 @@ export default function Services() {
       <PageHeader
         eyebrow="Specialization"
         title="Services"
-        lead="How I can help bring your idea to life."
+        lead="Here's what I can help you build."
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
@@ -51,10 +51,10 @@ export default function Services() {
           <div className="card mt-6 flex flex-col items-center gap-4 p-6 text-center md:flex-row md:justify-between md:p-8 md:text-left">
             <div>
               <h2 className="text-lg font-medium text-paper">
-                Have a project in mind?
+                Got a project?
               </h2>
               <p className="mt-1 text-sm text-ink">
-                Let&apos;s talk about how we can build it together.
+                I&apos;d love to hear about it. Let&apos;s figure out how to build it.
               </p>
             </div>
             <Link to="/contact" className="theme-btn">

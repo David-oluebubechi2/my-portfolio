@@ -1,5 +1,6 @@
 import hmsImage from "../assets/hms.png";
 import choplyImage from "../assets/choply.png";
+import codespanImage from "../assets/codespanImg.png";
 
 export type Project = {
   title: string;
@@ -16,9 +17,9 @@ export const role = "Full-Stack Developer";
 export const headline = "COMPUTER SCIENCE STUDENT";
 
 export const bio = [
-  "Computer science student and developer focused on building practical web applications, APIs, and reliable systems.",
-  "From designing database schemas to shipping polished React interfaces, I enjoy owning features end-to-end. My day-to-day stack is NestJS + Node.js for the backend and React + TypeScript for the frontend.",
-  "I'm constantly learning — recently shipping projects with WebSocket APIs and AI-assisted development tooling, and exploring mobile development with Dart.",
+  "CS student who likes building things that actually work. I spend most of my time on web apps and APIs — anything where I can see a project go from idea to something people can use.",
+  "I'm self-taught before university taught me anything. Started coding in 2024 and jumped straight into full projects — databases, auth, frontends, the whole thing. I like owning a feature from start to finish.",
+  "Right now I'm deep in NestJS + TypeScript on the backend and React on the frontend. Recently been shipping projects with WebSockets and AI-assisted tooling, and I'm starting to explore mobile with Dart.",
 ];
 
 export const handles = {
@@ -54,7 +55,7 @@ export const projects: Project[] = [
     description:
       "A full-stack medical clinic scheduling and patient portal system with modular routing, multi-role user portals and centralized database management.",
     tags: ["React", "TypeScript", "REST", "CSS"],
-    link: handles.github,
+    link: "https://citycare-hms.vercel.app/",
     source: handles.github,
     image: hmsImage,
   },
@@ -68,6 +69,16 @@ export const projects: Project[] = [
     source: handles.github,
     image: choplyImage,
   },
+  {
+    title: "CodeSpan",
+    tagline: "Tech Hiring Platform",
+    description:
+      "A platform for hiring skilled tech talent — built with React and NestJS, designed to streamline the recruitment process for developers.",
+    tags: ["React", "NestJS", "TypeScript", "Tailwind CSS"],
+    link: "https://codespan-tau.vercel.app/",
+    source: handles.github,
+    image: codespanImage,
+  },
 ];
 
 export const experience = [
@@ -76,20 +87,10 @@ export const experience = [
     org: "Independent Projects & Freelance",
     period: "2024 — Present",
     points: [
-      "Started programming in 2024 and have been building production-style web applications ever since.",
-      "Engineer REST APIs, WebSocket APIs, authentication flows and validation with Node.js and NestJS.",
-      "Build responsive, accessible React & TypeScript frontends with Tailwind CSS.",
-      "Manage projects with Git, structured code review and production-first thinking.",
-    ],
-  },
-  {
-    role: "B.Sc. Computer Science",
-    org: "Thomas Adewumi University",
-    period: "2023 — 2027",
-    points: [
-      "Studying algorithms, data structures, web development, database systems and software architecture.",
-      "Exploring AI-powered and voice-driven academic assistant applications.",
-      "Continuously expanding into mobile development with Dart.",
+      "Picked up programming in 2024 and haven't stopped building since.",
+      "Shipping REST APIs, WebSocket backends, auth systems and form validation with Node.js and NestJS.",
+      "Building React + TypeScript frontends with Tailwind CSS — responsive, accessible, and clean.",
+      "Using Git daily, writing code I'd actually want to maintain, and thinking about production from day one.",
     ],
   },
 ] as const;
@@ -101,7 +102,7 @@ export const education = [
     location: "Oko-Irese, Kwara, Nigeria",
     period: "2023 — 2027",
     detail:
-      "Building a strong foundation in algorithms, databases, web development and system architecture.",
+      "Learning the foundations — algorithms, databases, web dev, system design. The theory that makes the practical stuff make sense.",
   },
 ] as const;
 
@@ -164,24 +165,24 @@ export const services = [
     icon: "app",
     title: "Full-Stack Web Apps",
     detail:
-      "End-to-end web applications — database schema, APIs and polished interfaces designed and shipped together.",
+      "I build complete web apps — from the database schema to the API to the UI. Everything works together because I'm building all of it.",
   },
   {
     icon: "api",
     title: "REST & WebSocket APIs",
     detail:
-      "Robust, documented APIs with authentication, validation and real-time capabilities using Node.js and NestJS.",
+      "Backend services with authentication, validation, and real-time features. Node.js and NestJS, documented and ready to integrate.",
   },
   {
     icon: "frontend",
     title: "React Frontends",
     detail:
-      "Fast, accessible and responsive user interfaces with React, TypeScript and Tailwind CSS.",
+      "Fast, clean interfaces with React, TypeScript and Tailwind CSS. I care about things like accessibility and actually working on mobile.",
   },
   {
     icon: "database",
     title: "Database Design",
     detail:
-      "Normalized, efficient schemas and queries with PostgreSQL, engineered to stay clean as data grows.",
+      "Normalized schemas that don't fall apart when your data gets messy. PostgreSQL, designed to scale without becoming a nightmare.",
   },
 ] as const;

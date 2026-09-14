@@ -61,7 +61,7 @@ export default function Contact() {
       <PageHeader
         eyebrow="Contact"
         title="Get In Touch"
-        lead="I'm actively looking for internships, full-stack roles and freelance work. My inbox is always open."
+        lead="Looking for internships, full-stack roles, or freelance work. Always happy to chat."
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
@@ -124,9 +124,9 @@ export default function Contact() {
                   }`}
                 >
                   {status === "sent"
-                    ? "Thanks — your message is on its way to David's inbox."
+                    ? "Thanks — your message is on its way."
                     : status === "error"
-                      ? "Something went wrong. Please try again, or email David directly."
+                      ? "Something went wrong. Try again or email me directly."
                       : ""}
                 </p>
               </div>

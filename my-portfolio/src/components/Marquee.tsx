@@ -2,14 +2,14 @@ import { StarIcon } from "./icons";
 
 const row = (
   <>
-    <span className="text-soft">LATEST WORK AND</span>
-    <span className="text-paper"> FEATURED </span>
-    <StarIcon className="mx-5 inline-block h-3 w-3 fill-primary" />
+    <span className="whitespace-nowrap text-soft">LATEST WORK AND </span>
+    <span className="whitespace-nowrap text-paper">FEATURED </span>
+    <StarIcon className="mx-5 inline-block h-3 w-3 shrink-0 fill-primary" />
   </>
 );
 
 const half = (
-  <span className="flex items-center">
+  <span className="flex items-center whitespace-nowrap">
     {row}
     {row}
     {row}

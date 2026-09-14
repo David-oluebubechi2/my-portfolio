@@ -25,7 +25,7 @@ export default function Home() {
               className="min-h-[240px]"
             >
               <p className="mb-6 text-center text-sm leading-relaxed text-ink">
-                Selected full-stack apps I&apos;ve designed and built.
+                Full-stack apps I&apos;ve built and shipped.
               </p>
             </InfoCard>
 
@@ -37,7 +37,7 @@ export default function Home() {
               className="min-h-[240px]"
             >
               <p className="mb-6 text-center text-sm leading-relaxed text-ink">
-                What I can build for you — from APIs to full products.
+                What I can build — from APIs to full products.
               </p>
             </InfoCard>
 
@@ -86,8 +86,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="mt-8 max-w-md text-sm leading-relaxed text-ink md:text-base">
-                Open to internships, full-stack roles and freelance work. If
-                you have a project in mind, let&apos;s talk.
+                Open to internships, full-stack roles, and freelance projects.
+                Got something in mind? Let&apos;s talk.
               </p>
             </div>
           </Reveal>

@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Preloader from "./components/Preloader";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Experience from "./pages/Experience";
+import Experience from "./pages/Education";
 import Skills from "./pages/Skills";
 import Work from "./pages/Work";
 import Services from "./pages/Services";
@@ -31,6 +31,7 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Experience />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/work" element={<Work />} />

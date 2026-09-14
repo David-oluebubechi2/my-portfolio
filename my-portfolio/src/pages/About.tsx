@@ -76,6 +76,35 @@ export default function About() {
         <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal>
             <div className="card h-full p-6 md:p-8">
+              <p className="eyebrow mb-5">Education</p>
+              <ul>
+                {education.map((edu) => (
+                  <li key={edu.degree} className="py-3">
+                    <p className="text-sm font-medium text-soft opacity-70">
+                      {edu.period}
+                    </p>
+                    <h3 className="mt-1 text-lg font-medium text-paper">
+                      {edu.degree}
+                      <span className="text-primary"> — {edu.school}</span>
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink">
+                      {edu.location}. {edu.detail}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/education"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-paper"
+              >
+                View full timeline
+                <SwordIcon className="h-3 w-3 transition-transform group-hover:rotate-45 sm:h-3.5 sm:w-3.5" />
+              </Link>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="card h-full p-6 md:p-8">
               <p className="eyebrow mb-5">Experience</p>
               <ul>
                 {experience.map((job) => (
@@ -97,47 +126,12 @@ export default function About() {
                 ))}
               </ul>
               <Link
-                to="/experience"
+                to="/education"
                 className="group inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-paper"
               >
                 View full timeline
                 <SwordIcon className="h-3 w-3 transition-transform group-hover:rotate-45 sm:h-3.5 sm:w-3.5" />
               </Link>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="card h-full p-6 md:p-8">
-              <p className="eyebrow mb-5">Education</p>
-              <ul>
-                {education.map((edu) => (
-                  <li key={edu.degree} className="py-3">
-                    <p className="text-sm font-medium text-soft opacity-70">
-                      {edu.period}
-                    </p>
-                    <h3 className="mt-1 text-lg font-medium text-paper">
-                      {edu.degree}
-                      <span className="text-primary"> — {edu.school}</span>
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink">
-                      {edu.location}. {edu.detail}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 rounded-2xl border border-white/5 bg-white/[0.03] p-6">
-                <h3 className="text-base font-medium text-paper">
-                  Let&apos;s build something together.
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink">
-                  I&apos;m open to internships, full-stack roles and freelance
-                  projects. Say hi — my inbox is always open.
-                </p>
-                <Link to="/contact" className="theme-btn mt-5">
-                  Let&apos;s talk
-                </Link>
-              </div>
             </div>
           </Reveal>
         </div>

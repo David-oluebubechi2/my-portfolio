@@ -10,7 +10,7 @@ export default function Work() {
       <PageHeader
         eyebrow="Showcase"
         title="Projects"
-        lead="A selection of full-stack applications I've designed and built end-to-end."
+        lead="Things I've built from scratch — full apps, not just tutorials."
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
@@ -29,7 +29,7 @@ export default function Work() {
                 Want to see more?
               </h2>
               <p className="mt-1 text-sm text-ink">
-                More experiments and side projects live on my GitHub.
+                More experiments and side projects on my GitHub.
               </p>
             </div>
             <a

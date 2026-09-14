@@ -4,7 +4,7 @@ import { LogoMark } from "./icons";
 const menu = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Experience", path: "/experience" },
+  { name: "Education", path: "/education" },
   { name: "Skills", path: "/skills" },
   { name: "Projects", path: "/work" },
   { name: "Contact", path: "/contact" },

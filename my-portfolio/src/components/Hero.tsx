@@ -52,14 +52,14 @@ export default function Hero() {
           <div className="grid flex-1 grid-cols-1 gap-6 sm:grid-cols-2">
             <InfoCard
               eyebrow="War Stories"
-              title="Experience"
-              to="/experience"
+              title="Education"
+              to="/education"
               icon={
                 <GraduationCapIcon className="h-10 w-10 text-primary opacity-50" />
               }
             >
               <p className="mb-2 text-center text-sm leading-relaxed text-ink">
-                Coding since 2024, studying CS from 2023 — see the full story.
+                CS degree, self-taught skills, and everything in between.
               </p>
             </InfoCard>
 

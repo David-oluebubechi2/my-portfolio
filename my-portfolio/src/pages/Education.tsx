@@ -6,13 +6,13 @@ import { socialIconMap } from "../components/socialIcons";
 import profileImage from "../assets/oluebubechi.jpeg";
 import { education, experience, name, socials } from "../data/portfolio";
 
-export default function Experience() {
+export default function Education() {
   return (
     <Layout>
       <PageHeader
         eyebrow="My Journey"
-        title="Experience & Education"
-        lead="Where I've been and what I'm working on — coding since 2024, studying computer science since 2023."
+        title="Education & Experience"
+        lead="How I got here — a CS degree, a lot of self-teaching, and projects that taught me more than any tutorial."
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
@@ -50,7 +50,7 @@ export default function Experience() {
               </div>
 
               <p className="mt-6 text-sm leading-relaxed text-ink">
-                Open to internships and full-stack opportunities.
+                Open to internships and full-stack roles.
               </p>
 
               <Link to="/contact" className="theme-btn mt-5 w-full text-center">
@@ -60,6 +60,34 @@ export default function Experience() {
           </Reveal>
 
           <div className="space-y-10">
+            <Reveal>
+              <div className="card p-6 md:p-8">
+                <h2 className="mb-2 w-fit rounded-lg bg-white/5 px-3 py-1 text-sm font-medium uppercase tracking-wider text-paper">
+                  Education
+                </h2>
+
+                <ul>
+                  {education.map((edu) => (
+                    <li key={edu.degree} className="py-5">
+                      <p className="text-base font-medium text-soft opacity-60">
+                        {edu.period}
+                      </p>
+                      <h3 className="mt-1.5 text-lg font-medium leading-snug text-paper">
+                        {edu.degree}
+                        <span className="text-primary"> — {edu.school}</span>
+                      </h3>
+                      <p className="mt-1 text-sm text-soft opacity-70">
+                        {edu.location}
+                      </p>
+                      <p className="mt-3 text-sm leading-relaxed text-ink">
+                        {edu.detail}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
             <Reveal>
               <div className="card p-6 md:p-8">
                 <h2 className="mb-2 w-fit rounded-lg bg-white/5 px-3 py-1 text-sm font-medium uppercase tracking-wider text-paper">
@@ -90,34 +118,6 @@ export default function Experience() {
                           </li>
                         ))}
                       </ul>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-
-            <Reveal>
-              <div className="card p-6 md:p-8">
-                <h2 className="mb-2 w-fit rounded-lg bg-white/5 px-3 py-1 text-sm font-medium uppercase tracking-wider text-paper">
-                  Education
-                </h2>
-
-                <ul>
-                  {education.map((edu) => (
-                    <li key={edu.degree} className="py-5">
-                      <p className="text-base font-medium text-soft opacity-60">
-                        {edu.period}
-                      </p>
-                      <h3 className="mt-1.5 text-lg font-medium leading-snug text-paper">
-                        {edu.degree}
-                        <span className="text-primary"> — {edu.school}</span>
-                      </h3>
-                      <p className="mt-1 text-sm text-soft opacity-70">
-                        {edu.location}
-                      </p>
-                      <p className="mt-3 text-sm leading-relaxed text-ink">
-                        {edu.detail}
-                      </p>
                     </li>
                   ))}
                 </ul>
