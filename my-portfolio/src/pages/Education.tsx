@@ -5,6 +5,7 @@ import Reveal from "../components/Reveal";
 import { socialIconMap } from "../components/socialIcons";
 import profileImage from "../assets/oluebubechi.jpeg";
 import { education, experience, name, socials } from "../data/portfolio";
+import certificateImage from "../assets/certificate.png";
 
 export default function Education() {
   return (
@@ -121,6 +122,25 @@ export default function Education() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div className="card mx-auto w-full max-w-md p-6">
+                <h2 className="mb-2 w-fit rounded-lg bg-white/5 px-3 py-1 text-sm font-medium uppercase tracking-wider text-paper">
+                  Certification
+                </h2>
+                <h3 className="mt-1.5 text-lg font-medium leading-snug text-paper">
+                  Frontend Development
+                </h3>
+                <p className="mt-1 text-sm text-soft opacity-70">
+                  Completed frontend development program
+                </p>
+                <img
+                  src={certificateImage}
+                  alt="Frontend Development Certificate"
+                  className="mt-5 w-full rounded-lg border border-white/5 object-contain"
+                />
               </div>
             </Reveal>
           </div>
