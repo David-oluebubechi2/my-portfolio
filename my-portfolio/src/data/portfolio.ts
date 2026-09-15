@@ -1,6 +1,7 @@
 import hmsImage from "../assets/hms.png";
 import choplyImage from "../assets/choply.png";
 import codespanImage from "../assets/codespanImg.png";
+import finflowImage from "../assets/finflow.png";
 
 export type Project = {
   title: string;
@@ -78,6 +79,16 @@ export const projects: Project[] = [
     link: "https://codespan-tau.vercel.app/",
     source: handles.github,
     image: codespanImage,
+  },
+  {
+    title: "FinFlow",
+    tagline: "Finance Platform",
+    description:
+      "A modern finance platform built to manage and visualize financial data — featuring a clean UI and responsive design.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    link: "https://finflow-frontend-self.vercel.app/",
+    source: handles.github,
+    image: finflowImage,
   },
 ];
 
