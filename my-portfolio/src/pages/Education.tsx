@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
+import { SpearSeparator } from "../components/icons";
 import { socialIconMap } from "../components/socialIcons";
 import profileImage from "../assets/oluebubechi.jpeg";
 import { education, experience, name, socials } from "../data/portfolio";
@@ -13,7 +14,13 @@ export default function Education() {
       <PageHeader
         eyebrow="My Journey"
         title="Education & Experience"
-        lead="How I got here — a CS degree, a lot of self-teaching, and projects that taught me more than any tutorial."
+        lead={
+          <>
+            How I got here <SpearSeparator className="mx-1.5" /> a CS degree, a
+            lot of self-teaching, and projects that taught me more than any
+            tutorial.
+          </>
+        }
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
@@ -75,7 +82,9 @@ export default function Education() {
                       </p>
                       <h3 className="mt-1.5 text-lg font-medium leading-snug text-paper">
                         {edu.degree}
-                        <span className="text-primary"> — {edu.school}</span>
+                        <span className="text-primary">
+                          <SpearSeparator className="mx-1.5" /> {edu.school}
+                        </span>
                       </h3>
                       <p className="mt-1 text-sm text-soft opacity-70">
                         {edu.location}
@@ -106,7 +115,9 @@ export default function Education() {
                       </p>
                       <h3 className="mt-1.5 text-lg font-medium leading-snug text-paper">
                         {job.role}
-                        <span className="text-primary"> — {job.org}</span>
+                        <span className="text-primary">
+                          <SpearSeparator className="mx-1.5" /> {job.org}
+                        </span>
                       </h3>
                       <ul className="mt-3 space-y-2">
                         {job.points.map((point) => (

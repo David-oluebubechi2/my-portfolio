@@ -42,6 +42,15 @@ export function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
+export function SpearSeparator({ className }: { className?: string }) {
+  return (
+    <SwordIcon
+      aria-hidden="true"
+      className={`inline-block h-[1em] w-[1em] align-[-0.08em] text-primary ${className ?? ""}`}
+    />
+  );
+}
+
 export function SwordIcon({ className }: { className?: string }) {
   return (
     <svg className={className} {...baseProps}>

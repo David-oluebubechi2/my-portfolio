@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import ProjectCard from "../components/ProjectCard";
 import Reveal from "../components/Reveal";
+import { SpearSeparator } from "../components/icons";
 import { projects, handles } from "../data/portfolio";
 
 export default function Work() {
@@ -10,11 +11,16 @@ export default function Work() {
       <PageHeader
         eyebrow="Showcase"
         title="Projects"
-        lead="Things I've built from scratch — full apps, not just tutorials."
+        lead={
+          <>
+            Things I&apos;ve built from scratch <SpearSeparator className="mx-1.5" /> full apps,
+            not just tutorials.
+          </>
+        }
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.08}>
               <ProjectCard project={project} />

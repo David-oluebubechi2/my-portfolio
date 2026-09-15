@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import Reveal from "./Reveal";
 
 type PageHeaderProps = {
   eyebrow: string;
   title: string;
-  lead?: string;
-  children?: React.ReactNode;
+  lead?: ReactNode;
+  children?: ReactNode;
 };
 
 export default function PageHeader({

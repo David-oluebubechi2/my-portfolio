@@ -2,12 +2,13 @@ import hmsImage from "../assets/hms.png";
 import choplyImage from "../assets/choply.png";
 import codespanImage from "../assets/codespanImg.png";
 import finflowImage from "../assets/finflow.png";
+import nomadiaImage from "../assets/nomadia.png";
+import novastudioImage from "../assets/novastudio.png";
 
 export type Project = {
   title: string;
   tagline: string;
   description: string;
-  tags: string[];
   link: string;
   source: string;
   image: string;
@@ -55,7 +56,6 @@ export const projects: Project[] = [
     tagline: "Healthcare Platform",
     description:
       "A full-stack medical clinic scheduling and patient portal system with modular routing, multi-role user portals and centralized database management.",
-    tags: ["React", "TypeScript", "REST", "CSS"],
     link: "https://citycare-hms.vercel.app/",
     source: handles.github,
     image: hmsImage,
@@ -65,7 +65,6 @@ export const projects: Project[] = [
     tagline: "Food Ordering Platform",
     description:
       "A full-stack food ordering platform built with React, NestJS and PostgreSQL — featuring structured backend services and AI-assisted development tooling.",
-    tags: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
     link: "https://choply-jade.vercel.app/",
     source: handles.github,
     image: choplyImage,
@@ -75,7 +74,6 @@ export const projects: Project[] = [
     tagline: "Tech Hiring Platform",
     description:
       "A platform for hiring skilled tech talent — built with React and NestJS, designed to streamline the recruitment process for developers.",
-    tags: ["React", "NestJS", "TypeScript", "Tailwind CSS"],
     link: "https://codespan-tau.vercel.app/",
     source: handles.github,
     image: codespanImage,
@@ -85,10 +83,27 @@ export const projects: Project[] = [
     tagline: "Finance Platform",
     description:
       "A modern finance platform built to manage and visualize financial data — featuring a clean UI and responsive design.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     link: "https://finflow-frontend-self.vercel.app/",
     source: handles.github,
     image: finflowImage,
+  },
+  {
+    title: "Nomadia",
+    tagline: "Travel Platform",
+    description:
+      "A travel-focused platform for exploring destinations and planning journeys — built with a clean, modern frontend.",
+    link: "https://nomadia-frontend.vercel.app/",
+    source: handles.github,
+    image: nomadiaImage,
+  },
+  {
+    title: "Nova Studio",
+    tagline: "Creative Studio",
+    description:
+      "A creative studio platform showcasing design and digital work — featuring a clean UI and responsive layout.",
+    link: "https://nova-studio-sigma.vercel.app/",
+    source: handles.github,
+    image: novastudioImage,
   },
 ];
 

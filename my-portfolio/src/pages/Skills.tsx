@@ -1,4 +1,4 @@
-import { SparklesIcon } from "../components/icons";
+import { SparklesIcon, SpearSeparator } from "../components/icons";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
@@ -10,7 +10,13 @@ export default function Skills() {
       <PageHeader
         eyebrow="Technologies"
         title="Skills"
-        lead="The tools I reach for to design, build and maintain software — plus what I'm exploring next."
+        lead={
+          <>
+            The tools I reach for to design, build and maintain software{" "}
+            <SpearSeparator className="mx-1.5" /> plus what I&apos;m exploring
+            next.
+          </>
+        }
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
-import { SwordIcon } from "../components/icons";
+import { SpearSeparator, SwordIcon } from "../components/icons";
 import { socialIconMap } from "../components/socialIcons";
 import profileImage from "../assets/oluebubechi.jpeg";
 import { bio, education, experience, socials, name } from "../data/portfolio";
@@ -85,7 +85,9 @@ export default function About() {
                     </p>
                     <h3 className="mt-1 text-lg font-medium text-paper">
                       {edu.degree}
-                      <span className="text-primary"> — {edu.school}</span>
+                      <span className="text-primary">
+                        <SpearSeparator className="mx-1.5" /> {edu.school}
+                      </span>
                     </h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink">
                       {edu.location}. {edu.detail}
@@ -117,7 +119,9 @@ export default function About() {
                     </p>
                     <h3 className="mt-1 text-lg font-medium text-paper">
                       {job.role}
-                      <span className="text-primary"> — {job.org}</span>
+                      <span className="text-primary">
+                        <SpearSeparator className="mx-1.5" /> {job.org}
+                      </span>
                     </h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink">
                       {job.points[0]}

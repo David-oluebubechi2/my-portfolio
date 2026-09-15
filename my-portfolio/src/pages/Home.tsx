@@ -1,4 +1,4 @@
-import { GridIcon, ServerIcon } from "../components/icons";
+import { GridIcon, ServerIcon, SpearSeparator } from "../components/icons";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -37,7 +37,8 @@ export default function Home() {
               className="min-h-[240px]"
             >
               <p className="mb-6 text-center text-sm leading-relaxed text-ink">
-                What I can build — from APIs to full products.
+                What I can build <SpearSeparator className="mx-1.5" /> from APIs
+                to full products.
               </p>
             </InfoCard>
 

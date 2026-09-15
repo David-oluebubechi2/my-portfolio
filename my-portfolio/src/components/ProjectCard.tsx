@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <img
           src={project.image}
           alt={`${project.title} screenshot`}
-          className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
@@ -34,12 +34,6 @@ export default function ProjectCard({ project }: { project: Project }) {
       <p className="mt-4 px-2 text-sm leading-relaxed text-ink">
         {project.description}
       </p>
-
-      <ul className="mt-auto flex flex-wrap gap-x-4 gap-y-1 px-2 pt-4 text-xs text-soft">
-        {project.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
     </div>
   );
 }

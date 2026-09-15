@@ -1,4 +1,4 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "../components/icons";
+import { MailIcon, MapPinIcon, PhoneIcon, SpearSeparator } from "../components/icons";
 import { useState, type FormEvent } from "react";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
@@ -65,7 +65,7 @@ export default function Contact() {
       />
 
       <div className="mx-auto w-full max-w-[1170px] px-5 pb-24">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_290px]">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_330px]">
           <Reveal>
             <form onSubmit={submit} className="card p-6 md:p-10">
               <h2 className="text-2xl font-medium text-paper md:text-[34px]">
@@ -123,11 +123,16 @@ export default function Contact() {
                         : "hidden"
                   }`}
                 >
-                  {status === "sent"
-                    ? "Thanks — your message is on its way."
-                    : status === "error"
-                      ? "Something went wrong. Try again or email me directly."
-                      : ""}
+                  {status === "sent" ? (
+                    <>
+                      Thanks <SpearSeparator className="mx-1.5" /> your message
+                      is on its way.
+                    </>
+                  ) : status === "error" ? (
+                    "Something went wrong. Try again or email me directly."
+                  ) : (
+                    ""
+                  )}
                 </p>
               </div>
             </form>
