@@ -46,7 +46,7 @@ export const socials = [
 
 export const stats = [
   { value: "2+", label: "Years Coding" },
-  { value: "3", label: "Core Stacks" },
+  { value: "4", label: "Core Stacks" },
   { value: "'27", label: "Grad Class" },
 ] as const;
 
@@ -145,6 +145,7 @@ export const skillGroups = [
     skills: [
       "Node.js",
       "NestJS",
+      "Hono",
       "WebSocket API",
       "REST API Design",
       "PostgreSQL",
@@ -179,6 +180,7 @@ export const skillLevels = [
   { name: "React", level: 85 },
   { name: "TypeScript", level: 80 },
   { name: "Node.js / NestJS", level: 78 },
+  { name: "Hono", level: 78 },
   { name: "Tailwind CSS", level: 88 },
   { name: "PostgreSQL", level: 75 },
   { name: "WebSocket API", level: 72 },
