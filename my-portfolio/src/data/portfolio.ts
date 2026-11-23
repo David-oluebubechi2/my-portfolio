@@ -1,4 +1,5 @@
 import hmsImage from "../assets/hms.png";
+import bitehubImage from "../assets/bitehub.png";
 import choplyImage from "../assets/choply.png";
 import codespanImage from "../assets/codespanImg.png";
 import finflowImage from "../assets/finflow.png";
@@ -51,6 +52,15 @@ export const stats = [
 ] as const;
 
 export const projects: Project[] = [
+  {
+    title: "BiteHub",
+    tagline: "Food Delivery Platform",
+    description:
+      "A full-stack food ordering platform where customers can browse meals, place orders and get their cravings delivered — built with a modern, responsive frontend.",
+    link: "https://bitehub-theta.vercel.app/",
+    source: handles.github,
+    image: bitehubImage,
+  },
   {
     title: "CityCare Hospital Management",
     tagline: "Healthcare Platform",
